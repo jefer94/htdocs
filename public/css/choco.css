@@ -1,0 +1,264 @@
+* {
+	margin: 0;
+	padding: 0;
+}
+
+body {
+	background-color: #7f8c8d;
+	color: #2c3e50;
+}
+
+.search {
+  background-color: #ecf0f1;
+  height: 52px;
+  box-shadow: 0 2px #242828;
+}
+.search-item {
+  height: 52px;
+}
+
+.view {
+  margin-right: 4.66666665%;
+  margin-left: 4.66666665%;
+}
+
+.search > h1 {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  text-align: center;
+  font-size: 25px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
+
+.nav {
+	background-color: #343838;
+	color: #C1C1C1;
+	overflow: hidden;
+	box-shadow: 2px 0 1px #242828;
+  height: 100%;
+  position: fixed;
+  overflow: auto;
+  margin: 0;
+  padding: 0;
+}
+
+.element {
+  background-color: #242828;
+  color: #C1C1C1;
+  width: 100%;
+  border-top: 1px solid #2980b9;
+  border-bottom: 1px solid #2980b9;
+  left: 0;
+}
+
+
+.nav ul {
+	margin: 0;
+  vertical-align: middle;
+
+}
+
+.nav ul li {
+	list-style-type: none;
+/*	display: inline-block;*/
+	padding: 10px;
+}
+
+.nav ul li a {
+	text-decoration:none;
+	padding: 10px;
+	color: #C1C1C1;
+}
+
+.container {
+	overflow: hidden;
+	padding: 10px;
+	background-color: #ecf0f1;
+	color: #2c3e50;
+	position: relative;
+	box-shadow: 0 2px 0 #242828;
+	margin: 5px;
+}
+.margin {
+	padding-left: 20px;
+}
+
+.container-aside {
+	padding: 0;
+	overflow: hidden;
+	background-color: #ecf0f1;
+	color: #2c3e50;
+	position: relative;
+	box-shadow: 0 2px 0 #242828;
+
+}
+
+.container-menu {
+  padding: 10px 0 10px 0;
+  overflow: hidden;
+  background-color: #2980b9;
+  color: #ecf0f1;
+  position: relative;
+}
+
+.comment {
+  border-top: 1px solid #7f8c8d;
+  border-bottom: 1px solid #7f8c8d;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  margin-bottom: -1px;
+}
+
+.space {
+	margin-top: 10px;
+	margin-bottom: 10px;
+}
+
+@media (min-width: 768px) {
+	.container {
+		margin: 32px 100px 0 100px;
+	}
+	.nav ul {
+		margin: 0;
+	}
+}
+
+
+.left {
+	float: left !important;
+}
+.right {
+	float: right !important;
+}
+/*.right ~ .right {
+	margin-right: 0;
+}*/
+
+.link-undecorated {
+	text-decoration:none;
+	color: #2c3e50;
+}
+
+.unmark {
+	color: #888;
+	font-size: 13px;
+	font-weight: normal;
+}
+
+textarea {
+	resize: vertical;
+}
+
+input {
+  display: inline-block;
+  padding: 6px 12px;
+  margin-bottom: 0;
+  font-size: 14px;
+  font-weight: normal;
+  line-height: 1.42857143;
+  text-align: center;
+  white-space: nowrap;
+  vertical-align: middle;
+  -ms-touch-action: manipulation;
+      touch-action: manipulation;
+  cursor: pointer;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+  background-image: none;
+  border: 1px solid transparent;
+  border-radius: 4px;
+  background-color: transparent;
+  border-color: #2980b9;
+  text-align: center;
+}
+input:focus {
+  border-color: #66afe9;
+  outline: 0;
+  -webkit-box-shadow: inset 0 1px 1px rgba(0,0,0,.075), 0 0 8px rgba(102, 175, 233, 0.6);
+  box-shadow: inset 0 1px 1px rgba(0,0,0,.075), 0 0 8px rgba(102, 175, 233, 0.6);
+}
+
+input[type="submit"], input[type="button"] {
+  display: inline-block;
+  padding: 6px 12px;
+  margin-bottom: 0;
+  font-size: 14px;
+  font-weight: normal;
+  line-height: 1.42857143;
+  text-align: center;
+  white-space: nowrap;
+  vertical-align: middle;
+  -ms-touch-action: manipulation;
+      touch-action: manipulation;
+  cursor: pointer;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+  background-image: none;
+  border: 1px solid transparent;
+  border-radius: 4px;
+
+  color: #fff;
+  background-color: #2980b9;
+  border-color: #2e6da4;
+  text-align: center;
+}
+
+hr {
+	margin-top: 10px;
+	margin-bottom: 10px;
+	background-color: #777;
+}
+
+.text-left {
+  text-align: left;
+}
+.text-right {
+  text-align: right;
+}
+.text-center {
+  text-align: center;
+}
+.text-justify {
+  text-align: justify;
+}
+.text-nowrap {
+  white-space: nowrap;
+}
+.text-lowercase {
+  text-transform: lowercase;
+}
+.text-uppercase {
+  text-transform: uppercase;
+}
+.text-capitalize {
+  text-transform: capitalize;
+}
+.text-muted {
+  color: #777;
+}
+
+.hr-hidden {
+  margin: 0;
+  visibility: hidden;
+}
+
+.none {
+  width: 0;
+  height: 0;
+  visibility: hidden;
+  color: none;
+}
+
+.animation {
+  transition-duration: 0.2s;
+}
+
+.title {
+  font-size: 24px;
+}

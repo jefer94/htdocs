@@ -1,0 +1,47 @@
+* {
+	padding:0;
+	margin:0;
+	box-sizing: border-box;
+}
+.imagenes {
+	margin: 2.5%;
+	width: 95%;
+	display: flex;
+	flex-direction: row;
+	flex-wrap: wrap;
+	align-items: stretch;
+}
+ 
+.elemento {
+	background-color: #fff;
+	margin: 5px auto;
+	position: relative;
+	box-shadow: 2px 2px 20px 10px rgba(0,0,0,0.22);
+ }
+ 
+.elemento p {
+	padding:10px;
+	font-size:13px;
+}
+
+.elemento img {
+	width: 200px;
+}
+
+@media all and (max-width: 500px) {
+    .imagenes {
+    	margin: 0%;
+		width: 100%;
+		display: flex;
+		flex-direction: row;
+	}
+
+	.elemento {
+		background-color: #fff;
+		box-shadow: 2px 2px 20px 10px rgba(0,0,0,0.22);
+	}
+
+	.elemento img {
+		width: 200px;
+	}
+}

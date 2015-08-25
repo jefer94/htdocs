@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Choco - {% block title %}Inicio{% endblock %}</title>
+		<meta charset="utf-8">
+		{% block css %}
+			<link rel="stylesheet" href="/public/css/normalize.css">
+			<link rel="stylesheet" href="/public/css/columns.css">
+			<link rel="stylesheet" href="/public/css/form.css">
+			<link rel="stylesheet" href="/public/css/choco.css">
+		{% endblock %}
+	</head>
+
+	<body>
+		{% block nav %}
+			<nav class="nav col-3 left" id="nav">
+				<ul id="text">
+					<li class="element"><a href="/">CHOCO</a></li>	
+					{% if user %}
+						<li class="element"><a href="/ad/new">Agregar anuncio</a></li>
+						<li class="element"><a href="/logout">Desconectar</a></li>
+					{% else %}
+						<li class="element"><a href="/login">Ingresar</a></li>
+					{% endif %}
+				</ul>
+			</nav>
+		{% endblock %}
+		
+		<div class="col-9 col-offset-3 overflow left animation" id="container">
+			<div class="search col-12 overflow">
+				<h1 onclick="change()" id="btn" class="">{% block bar %}Muro{% endblock %}</h1>
+			</div>
+			<div class="view col-11">
+				{% block main %}
+					<main class="container space">
+
+						{% block container %}
+							{% if user %}
+								<div class="col-10 col-offset-1"> 
+									<a href="#" class="link-undecorated">
+										<strong>{{user.name}} {{user.surname}}</strong>
+										<span class="unmark">@{{user.username}}</span>
+									</a>
+									<form action="/" method="POST">
+										<textarea name="comment" placeholder="Comenta" class="col-12 form-control" rows="30"></textarea><br>
+										<input type="submit" value="comentar" class="col-2 col-offset-5">
+									</form>
+								</div>
+							{% endif %}
+							{% if comments %}
+								{% for comment in comments %}
+									<hr>
+									<div class="col-10 col-offset-1"> 
+										<div class="margin">
+											<a href="#" class="link-undecorated">
+												<strong>{{comment.name}}</strong>
+												<span class="unmark">@{{comment.username}}</span>
+											</a>
+										<p>{{comment.comment}}</p> 
+										</div>
+									</div>
+								{% endfor %}
+							{% else %}
+								<div class="col-10 col-offset-1"> 
+									<div class="margin">
+										<a href="#" class="link-undecorated">
+											<strong>Administrador</strong>
+											<span class="unmark">@admin</span>
+										</a>
+									<p>Sin publicaciones</p> 
+									</div>
+								</div>
+							{% endif %}
+						{% endblock %}	
+					</main>
+				{% endblock %}
+			</div>
+		</div>
+		{% block js %}
+			<script>
+				function change() {
+					container=document.getElementById("container");
+					nav=document.getElementById("nav");
+					text=document.getElementById("text");
+					btn=document.getElementById("btn");
+					if (container.className=="col-9 col-offset-3 overflow left animation") {
+						text.className="none";
+						nav.className="none animation";
+						container.className="col-12 col-offset-0 overflow left animation";
+						btn.value="Mostrar";
+					}
+					else {
+						text.className="animation";
+						nav.className="nav col-3 left animation";
+						container.className="col-9 col-offset-3 overflow left animation";
+						btn.value="Ocultar";
+					}
+					
+
+				}
+			</script>
+		{% endblock %}	
+	</body>
+</html>

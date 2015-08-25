@@ -1,0 +1,48 @@
+{% extends 'layout.html.twig' %}
+
+{% block main %}
+	<main class="container-aside col-12 space left">
+		{% for ad in ads %}
+			<div class="comment "> 
+				<div class="col-10 col-offset-1">
+					<p class="unmark">
+						publicado por @{{ad.username}}
+					</p>
+					<br>
+					<p>{{ad.description}}</p> 
+				</div>
+			</div>
+		{% endfor %}
+		{% block container %}
+			{% if user %}
+				<div class="col-10 col-offset-1"> 
+					<form action="/ad/{{ref}}" method="POST">
+						<textarea name="comment" placeholder="Comenta" class="col-12 form-control" rows="30"></textarea><br>
+						<input type="submit" value="comentar" class="col-2 col-offset-5">
+					</form>
+				</div>
+			{% endif %}
+			{% if comments %}
+				{% for comment in comments %}
+					<div class="comment "> 
+						<div class="col-10 col-offset-1">
+							<p class="unmark">
+								@{{comment.username}} dice:
+							</p>
+							<p>{{comment.comment}}</p> 
+						</div>
+					</div>
+				{% endfor %}
+			{% else %}
+				<div class="col-10 col-offset-1"> 
+					<p class="unmark">
+						Avido de @admin
+					</p>
+					<p>Aun no hay comentarios</p> 
+				</div>
+			{% endif %}
+		{% endblock %}	
+	</main>
+{% endblock %}
+		
+{% block bar %}{% for ad in ads %}{{ad.title}}{% endfor %}{% endblock %}

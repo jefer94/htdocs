@@ -1,0 +1,31 @@
+{% extends 'layout.html.twig' %}
+
+{% block title %}Login{% endblock %}
+
+{% block container %}
+	<div class="col-5 col-xs-12 left"> 
+		<h3 class="text-center">Ingreso</h3><br>
+		<form action="/login" method="POST">
+			<input type="text" name="username" placeholder="Usuario" class="col-12 form-control"></input><br>
+			<input type="password" name="pass" placeholder="Contraseña" class="col-12 form-control"></input><br>
+			<input type="submit" value="Enviar" class="col-12"><br>
+		</form>
+	</div>
+	<div class="col-2 hidden-xs left"> 
+		<h4 class="text-center">o</h4>
+	</div>
+	<div class="col-5 col-xs-12 left"> 
+		<h3 class="text-center">Registro</h3><br>
+		<form action="/login" method="POST">
+			<input type="text" name="username" placeholder="Usuario" class="col-12 form-control"></input><br>
+			<input type="password" name="pass" placeholder="Contraseña" class="col-12 form-control"></input><br>
+			<input type="text" name="name" placeholder="Nombre" class="col-12 form-control"></input><br>
+			<input type="text" name="surname" placeholder="Apellido" class="col-12 form-control"></input><br>
+			<input type="email" name="email" placeholder="Correo" class="col-12 form-control"></input><br>
+			<input type="date" name="date" placeholder="Fecha" class="col-12 form-control"></input><br>
+			<input type="submit" value="Enviar" class="col-12"><br>
+		</form>
+	</div>
+{% endblock %}	
+
+{% block bar %}Ingrese al sistema{% endblock %}

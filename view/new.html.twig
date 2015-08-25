@@ -1,0 +1,20 @@
+{% extends 'layout.html.twig' %}
+
+{% block main %}
+	<main class="container-aside col-12 space left">
+		{% block container %}
+			{% if user %}
+				<div class="col-10 col-offset-1"> 
+					<form action="/ad/new" method="POST">
+						<input name="title" placeholder="Titulo" class="col-12 form-control"></input><br>
+						<textarea name="description" placeholder="Escribe un anuncio" class="col-12 form-control" rows="30"></textarea><br>
+						<input type="submit" value="comentar" class="col-2 col-offset-5">
+					</form>
+				</div>
+			{% endif %}
+		{% endblock %}	
+	</main>
+{% endblock %}
+
+{% block bar %}Editor{% endblock %}
+		
