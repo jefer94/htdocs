@@ -1,44 +1,16 @@
-<!DOCTYPE html>
-<html lang="es">
-<head>
-	<meta charset="UTF-8">
-	<title>404 - pagina no encontrada.</title>
-	<meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
-	<link rel="stylesheet" href="../public/css/estilos.css">
-	<link rel="stylesheet" href="../public/css/footer.css">
-	<link rel="stylesheet" href="../public/css/seleccionador.css">
-	<link rel="stylesheet" href="../public/css/masonry.css">
-	<link rel="shortcut icon" href="../public/img/pacme.ico">
-	
-</head>
-<body>
-	<header>
-		<div class="menu">
-			<div class="contenedor">
-				<div class="imagen"></div>
-				<div class="logo">MusicProc</div>
-				<nav>
-					<ul>
-						<ul>
-							<li><a href="/">Inicio</a></li>
-                            <li><a href="/login">Login</a></li>
-						</ul>
-					</ul>
-				</nav>
-			</div>
-		</div>
-	</header>
-	<div class="texto">
+{% extends 'layout.html.twig' %}	
+
+{% block js %}
+
+{% endblock %}
+
+{% block container %}
+	<div class="text">
 		<div>
 			<h2>Error 404</h2>
 			<br>
 			<p>archivo o pagina no encontrada...</p>
 		</div>
 	</div>
-	</div>
-	<footer class="principal box">
-      <span><a href="https://github.com/ROM-PacMe/htdocs">MusicProc</a> es mantenida por <a href="">MusicProcProject.</a></span>
-    </footer>
-    <script src="http://code.jquery.com/jquery-latest.js"></script>
-</body>
-</html>
+{% endblock %}
+
